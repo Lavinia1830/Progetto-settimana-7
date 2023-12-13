@@ -72,7 +72,7 @@ const deleteProduct = async () => {
 
     if (response.ok) {
         alert('Prodotto eliminato correttamente');
-        window.location.replace('index.html');
+        window.location.assign("../index.html");
     } else {
         alert("Problema nell'eliminazione del prodotto");
     }
@@ -132,11 +132,11 @@ const saveProduct = async function (newProduct) {
         if (response.ok) {
             if(!window.confirm('Prodotto aggiunto correttamente! Desideri aggiungere altri prodotti?')){
                 alert('Verrai rendirizzato alla homepage.');
-                window.location.assign("index.html");
+                window.location.assign("../index.html");
 
             }
         }else {
-            alert("PROBLEMA NELLA CREAZIONE DEL PRODOTTO")
+            alert("Problema nella creazione del prodotto")
         }
     } catch (error) {
         console.log(error)
